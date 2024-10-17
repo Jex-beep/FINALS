@@ -1,0 +1,353 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #0a0a0a, #4a4a4a); /* Gradient background */
+    color: white; /* Set text color to white */
+}
+.hamburger{
+    display: none;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px; /* Add padding for spacing */
+    background-color: #222;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+/* About Us Section */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto; /* Reduce top margin for better spacing */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black box */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-left {
+    flex: 0 0 60%;
+    margin-right: 20px;
+}
+
+.about-right {
+    flex: 0 0 35%;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+    color: #fff; /* White text for headings */
+}
+
+p, ul, table {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #fff;
+}
+
+table th {
+    background-color: #444;
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Add responsive styling */
+    @media screen and (min-width: 600px) and (max-width: 1024px) {
+        /* Stack header items vertically */
+        header {
+            background-color: black;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        /* Center the logo and adjust its size */
+        .logo {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .logo img {
+            width: 80px; /* Increase size for better visibility on tablet */
+            height: 80px;
+        }
+
+        /* Center and adjust navbar */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            background-color: #666;
+            padding: 10px 15px;
+            border-radius: 40px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3); /* Add hover effect */
+        }
+
+        /* Stack the about section */
+        .about-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about-left, .about-right {
+            flex: 1 1 auto;
+            margin-right: 0;
+        }
+    }
+
+    /* Add responsive styling for mobile viewports */
+/* Add responsive styling for mobile viewports */
+@media screen and (max-width: 599px) {
+    /* Header Section */
+    header {
+        display: flex; /* Ensure header is a flex container */
+        justify-content: space-between; /* Space between logo and hamburger */
+        align-items: center;
+        padding: 10px 15px; /* Reduced padding for compactness */
+        background-color: black; /* Change to desired color */
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    /* Logo Styles for Mobile */
+    .logo {
+        margin-left: 5px; /* Move logo a little to the right */
+    }
+
+    .logo img {
+        width: 60px; /* Smaller logo for mobile */
+        height: 60px; /* Set height equal to width for a circle */
+    }
+
+    /* Hamburger button styles */
+    .hamburger {
+        display: block; /* Show on mobile */
+        background: transparent; /* Make background transparent */
+        border: none; /* Remove border */
+        color: white; /* Set hamburger menu color to white */
+        font-size: 30px; /* Adjust size if needed */
+        cursor: pointer; /* Change cursor on hover */
+    }
+
+    /* Navbar Styles for Mobile */
+    .navbar {
+        width: 100%; /* Full width navigation bar */
+        display: none; /* Initially hide navbar */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center items in navbar */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust top position */
+        right: 0; /* Align to the right */
+        z-index: 9; /* Ensure it appears above other content */
+        background-color: white; /* Change background to white */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack vertically */
+        width: 100%; /* Full width for list */
+        padding: 0; /* Reset padding */
+        margin: 0; /* Reset margin */
+    }
+
+    .navbar ul li {
+        margin: 5px 0; /* Reduced spacing between items */
+    }
+
+    .navbar ul li a {
+        padding: 15px; /* Adjust padding for mobile */
+        color: black; /* Change link color for visibility */
+        background-color: transparent; /* No background for menu items */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center text */
+        display: inline-block; /* Make the link inline-block */
+        width: auto; /* Set width to auto for the link */
+        position: relative; /* Set position for the underline */
+    }
+
+    .navbar ul li a::after {
+        content: ""; /* Create an empty element */
+        display: block; /* Make it a block */
+        width: 100%; /* Match width of the link */
+        height: 2px; /* Line thickness */
+        background-color: rgba(0, 0, 0, 0.5); /* Line color */
+        position: absolute; /* Position it absolutely */
+        left: 50%; /* Center it */
+        transform: translateX(-50%); /* Adjust for centering */
+        bottom: -5px; /* Position below the text */
+    }
+
+    /* Additional adjustments for content sections */
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Reduce padding */
+        margin: 20px 10px; /* Adjust margin for better fit */
+    }
+
+    .about-left,
+    .about-right {
+        width: 100%; /* Full width for both sections */
+        margin-right: 0; /* No right margin */
+    }
+
+    /* Footer Section Adjustments */
+    footer {
+        padding: 10px; /* Reduce padding for footer */
+        font-size: 14px; /* Adjust font size */
+    }
+}
+@media print {
+    /* Hide elements that should not be printed */
+    header, footer, .hamburger {
+        display: none !important; /* Hide header, footer, and hamburger menu */
+    }
+
+    body {
+        background: none; /* Remove background gradient */
+        color: black; /* Set text color to black for better visibility */
+    }
+
+    .about-container {
+        padding: 20px; /* Add padding for printed version */
+        margin: 0; /* Remove margin for printed version */
+        background: none; /* Remove background for printing */
+        box-shadow: none; /* Remove shadow for printing */
+    }
+
+    /* Ensure tables are styled properly for print */
+    table {
+        border-collapse: collapse; /* Collapse table borders */
+    }
+
+    table th, table td {
+        border: 1px solid #000; /* Change border color to black for print */
+        color: #000; /* Set text color to black */
+    }
+
+    /* Additional styles for headings and paragraphs */
+    h1, h2, p {
+        color: #000; /* Set text color to black */
+    }
+}

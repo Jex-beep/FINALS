@@ -1,0 +1,266 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger{
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #000, #666); /* Gradient background */
+    color: white; /* Set text color to white */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px; /* Add spacing between logo and search bar */
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+/* Terms and Conditions Container */
+.terms-container {
+    max-width: 800px;
+    margin: 30px auto; /* Increased margin for spacing */
+    padding: 30px; /* Increased padding for a more spacious look */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly more transparent for a layered look */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Deeper shadow for more depth */
+}
+
+/* Heading Styles */
+h1 {
+    text-align: center;
+    margin-bottom: 25px; /* Increased margin for separation */
+    font-size: 36px;
+    color: #fff; /* White text color for heading */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Shadow for depth */
+}
+
+/* Paragraph Styles */
+p {
+    margin-bottom: 20px; /* Increased margin for spacing */
+    color: #ddd; /* Light text color for paragraphs */
+    line-height: 1.6; /* Increased line height for better readability */
+    font-size: 16px; /* Increased font size for better readability */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Strong Text Styles */
+strong {
+    color: #fff;
+}
+
+/* Hover Effect on Paragraphs */
+p:hover {
+    color: #eee; /* Lighten color on hover for interaction */
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Responsive styling for tablet viewports */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    /* Change header background color */
+    header {
+        background-color: black; /* Black header background */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 20px 0; /* Add padding for spacing */
+    }
+
+    /* Center the logo */
+    .logo {
+        display: flex; /* Use flex to center logo */
+        justify-content: center; /* Center the logo horizontally */
+        width: 100%; /* Full width */
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 80px; /* Adjust logo size for tablet */
+        height: auto; /* Set height equal to width for a circle */
+    }
+
+    /* Move the navigation bar below the logo */
+    .navbar {
+        display: flex;
+        justify-content: center; /* Center navbar items */
+        margin-top: 10px; /* Spacing between logo and navbar */
+    }
+
+    .navbar ul {
+        display: flex; /* Ensure the navbar is horizontal */
+        list-style: none;
+        padding: 0; /* Remove padding */
+    }
+
+    .navbar li {
+        margin: 0 20px; /* Adjust spacing between items */
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; /* White text for navbar */
+        background-color: #666; /* Background for cleaner look */
+        padding: 10px 15px; /* Increase padding for better click area */
+        border-radius: 20px; /* Rounded corners */
+        transition: background-color 0.3s ease; /* Transition for hover effect */
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Slightly opaque on hover */
+    }
+
+    /* Terms and Conditions Container */
+    .terms-container {
+        padding: 25px; /* Adjust padding for tablet */
+    }
+
+    h1 {
+        font-size: 32px; /* Adjust heading size for tablet */
+    }
+
+    p {
+        font-size: 15px; /* Adjust paragraph size for tablet */
+    }
+}
+/* Responsive styling for mobile viewports */
+@media screen and (max-width: 599px) {
+    /* Header Section */
+    header {
+        background-color: black; /* Black header background */
+        display: flex; /* Ensure header is a flex container */
+        justify-content: space-between; /* Space between logo and hamburger */
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    /* Logo Styles for Mobile */
+    .logo img {
+        width: 60px; /* Smaller logo for mobile */
+        height: 60px; /* Set height equal to width for a circle */
+    }
+
+    /* Navbar Styles for Mobile */
+    .navbar {
+        width: 100%; /* Full width navigation bar */
+        display: none; /* Initially hide navbar */
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center items in navbar */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust top position */
+        right: 0; /* Align to the right */
+        z-index: 9; /* Ensure it appears above other content */
+        background-color: white; /* Change background to white */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    .navbar ul {
+        flex-direction: column; /* Stack vertically */
+        width: 100%; /* Full width for list */
+        
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Spacing between items */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* Line between items */
+    }
+
+    .navbar ul li a {
+        padding: 15px; /* Adjust padding for mobile */
+        color: black; /* Change link color for visibility */
+        background-color: transparent; /* No background for menu items */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width for menu items */
+        display: block; /* Make the link a block element */
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1); /* Add a hover effect */
+    }
+
+    /* Show the navbar when hamburger button is clicked */
+    .navbar.active {
+        display: flex; /* Show navbar */
+    }
+
+    /* Hamburger button styles */
+    .hamburger {
+        display: block; /* Show on mobile */
+        background: transparent; /* Make background transparent */
+        border: none; /* Remove border */
+        color: white; /* Set hamburger menu color to white */
+        font-size: 30px; /* Adjust size if needed */
+        cursor: pointer; /* Change cursor on hover */
+    }
+}

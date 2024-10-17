@@ -1,0 +1,328 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger{
+    display: none;
+}
+
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #0a0a0a, #4a4a4a); /* Gradient background */
+    color: white; /* Set text color to white */
+    flex: 1; /* Make sure body stretches to full height */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;
+    transform: scale(1.2);
+}
+
+/* Hero Image Section */
+.bgforbuyacar {
+    position: relative;
+    height: 400px;
+    background: url('images/bg.jpg') no-repeat center center/cover;
+}
+
+/* Contact Us Section */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 80px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent black box */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-grow: 1; /* Ensure this takes up available space */
+}
+
+.contact-info {
+    flex: 0 0 60%;
+    margin-right: 20px;
+    font-size: 1.2em;
+}
+
+.contact-info h1 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.map-container {
+    flex: 0 0 35%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%;
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+/* Add responsive styling */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    /* Change header background color */
+    header {
+        background-color: black;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    /* Center the logo */
+    .logo {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Move the navigation bar below the logo */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 0 20px;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        background-color: #666;
+        padding: 10px 15px;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    /* Adjust about container layout if necessary */
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-left,
+    .about-right {
+        flex: 1 1 auto;
+        margin-right: 0;
+    }
+}
+/* Mobile Viewport Styles */
+@media screen and (max-width: 599px) {
+    /* Header Section */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #000;
+    }
+
+    /* Logo Styles for Mobile */
+    .logo img {
+        width: 60px;
+        height: 60%;
+    }
+
+    /* Hamburger button styles */
+    .hamburger {
+        display: block;
+        background: transparent;
+        border: none;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* Navbar Styles for Mobile */
+    .navbar {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        position: relative;
+    }
+
+    .navbar ul li a {
+        padding: 15px;
+        color: black;
+        background-color: transparent;
+        border-radius: 8px;
+        text-align: center;
+        display: inline-block;
+    }
+
+    /* Underline effect matching text width */
+    .navbar ul li a::after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 80%; /* Adjust this percentage to fit the text */
+        border-bottom: 2px solid black; /* Add underline */
+        transform: translateY(10px); /* Move underline slightly below text */
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Contact Section */
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    .contact-info {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .contact-info h1 {
+        font-size: 1.5em;
+    }
+
+    /* Adjust the map container size for mobile */
+    .map-container {
+        flex: 1 1 100%;
+        height: 300px;
+    }
+
+    /* Footer Section */
+    footer {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Social media icons */
+    .social-icons img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .social-icons a {
+        margin: 0 5px;
+    }
+}

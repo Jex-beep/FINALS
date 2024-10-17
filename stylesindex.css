@@ -1,0 +1,400 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hamburger {
+    display: none; 
+}
+html, body {
+    height: 100%; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: fixed; 
+    width: 100%; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
+}
+
+/* Logo Style */
+.logo img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-right: 20px;
+}
+
+/* Navigation Bar Styles */
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px; 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; 
+    border-radius: 8px; 
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4); 
+    display: inline-block;
+    transition: background-color 0.3s ease; 
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.6); 
+    transform: scale(1.2); 
+}
+
+/* First Hero Image Section */
+.hero-image-1 {
+    position: relative;
+    height: 400px;
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    margin-top: 0; 
+}
+
+.hero-image-1 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero Text Styles */
+.hero-text-left {
+    position: absolute;
+    left: 150px;
+    top: 60%; 
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.hero-text-left h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 15px;
+}
+
+/* Second Hero Image Section */
+.hero-image-2 {
+    position: relative;
+    height: 400px;
+    background-image: url('images/car.jpg'); 
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-image-2 .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-text-right {
+    position: absolute;
+    right: 20px;
+    top: 20%;
+    color: white;
+    text-align: right;
+}
+
+.hero-text-right h1 {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 65px;
+    font-weight: bold;
+}
+
+.hero-text-right p {
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #222, #444);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Responsive Styles for Tablet Viewport */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .hamburger {
+        display: none; 
+    }
+    header {
+        background-color: black; 
+        flex-direction: column; 
+        align-items: center; 
+        padding: 20px 0; 
+    }
+
+    /* Center the logo */
+    .logo {
+        display: flex; 
+        justify-content: center; 
+        width: 100%; 
+        margin-bottom: 10px;
+    }
+
+    .logo img {
+        width: 80px; 
+        height: 80px; 
+    }
+
+    /* Move the navigation bar below the logo */
+    .navbar {
+        display: flex;
+        justify-content: center; 
+        margin-top: 10px; 
+    }
+
+    .navbar ul {
+        display: flex; 
+        list-style: none;
+        padding: 0;
+    }
+
+    .navbar li {
+        margin: 0px 20px; 
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; 
+        background-color: #666; 
+        padding: 10px 15px; 
+        border-radius: 20px; 
+        transition: background-color 0.3s ease; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); 
+    }
+
+    /* Hero Image Sections */
+    .hero-image-1,
+    .hero-image-2 {
+        height: 650px; 
+    }
+
+    /* Maintain hero text positions */
+    .hero-text-left {
+        position: absolute;
+        left: 50px; 
+        top: 60%; 
+        transform: translateY(-50%); 
+        color: white;
+        text-align: left; 
+    }
+
+    .hero-text-left h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 64px; 
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 15px;
+    }
+
+    .hero-text-right {
+        position: absolute;
+        right: 20px; 
+        top: 20%;
+        color: white;
+        text-align: right; 
+    }
+
+    .hero-text-right h1 {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 65px; 
+        font-weight: bold;
+    }
+
+    .hero-text-left p,
+    .hero-text-right p {
+        font-size: 20px;
+        padding: 0 15px; 
+    }
+}
+/* Add styles for mobile viewport and fix the hamburger menu display */
+@media screen and (min-width: 374px) and (max-width: 667px) {
+    .hamburger {
+        display: block; 
+        background: transparent; 
+        border: none; 
+        color: white; 
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Set header background color for mobile */
+    header {
+        background-color: black; 
+    }
+
+    /* Hide the navigation links by default */
+    .navbar ul {
+        display: none; 
+        flex-direction: column; 
+        background-color: white; 
+        position: absolute; 
+        top: 60px; 
+        right: 0; 
+        width: 100%; 
+        z-index: 9;
+        padding: 10px 0; 
+    }
+
+    /* Show the navigation links when the 'show' class is added */
+    .navbar ul.show {
+        display: flex; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .navbar li {
+        margin: 10px 0; 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); 
+    }
+
+    .navbar ul li a {
+        padding: 15px; 
+        color: black; 
+        background-color: transparent; 
+        border-radius: 8px; 
+        text-align: center; 
+        width: 100%; 
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+    /* Adjust heights of hero images for mobile */
+    .hero-image-1,
+    .hero-image-2 {
+        height: 300px; 
+        background-size: cover; 
+    }
+
+    .hero-text-left{
+        position: absolute;
+        left: 30px; 
+        top: 60%; 
+        transform: translateY(-50%); 
+        color: white;
+        text-align: left; 
+    }
+    .hero-text-right{
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 65px; 
+        font-weight: bold;
+        bottom: 30px;
+    }
+    /* Hero text styles for mobile */
+    .hero-text-left h1,
+    .hero-text-right h1 {
+        font-size: 24px; 
+        line-height: 1.2; 
+        letter-spacing: 2px; 
+    }
+
+    .hero-text-left p,
+    .hero-text-right p {
+        font-size: 16px; 
+        padding: 0 15px; 
+    }
+
+    /* Logo Style */
+    .logo img {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    /* Footer styles */
+    footer {
+        font-size: 12px; 
+    }
+}
+
+
+@media print {
+    body {
+        margin: 0; 
+        padding: 0; 
+    }
+
+    .hero-text-left {
+        font-size: 8px; 
+        margin: 0; 
+        padding: 0; 
+        line-height: 1.2; 
+    }
+
+    .hero-image {
+        max-width: 100%; 
+        height: auto; 
+    }
+
+    .navbar {
+        display: none; 
+    }
+
+    footer {
+        margin-top: 20px; 
+    }
+}
+
+
+
+
+
+
+

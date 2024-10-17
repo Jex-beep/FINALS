@@ -1,0 +1,544 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to top, #000, #666);
+    color: white;
+    padding-top: 100px;
+}
+
+/* Header Section */
+.hamburger{
+    display: none;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #222;
+    z-index: 1000;
+}
+
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px; /* Add spacing between logo and search bar */
+}
+
+.search-bar {
+    flex-grow: 1; /* Allows the search bar to grow to fill available space */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px 20px;
+    width: 100%; /* Make it as wide as possible */
+    max-width: 600px; /* Limit the maximum width */
+    border-radius: 50px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+/* Navbar Menu */
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: #555;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #777;  
+    transform: scale(1.2);
+}
+
+.navbar a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px; /* Add padding for better click area */
+    border-radius: 8px; /* Rounded corners */
+    transform-origin: center;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+    display: inline-block;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+/* Main Content Section */
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+}
+
+/* Car Section */
+.car-info, .registration-form {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%; /* Extend the car-info section to full width */
+    max-width: 800px; /* Limit maximum width for better presentation */
+}
+
+.car-info h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.car-gallery {
+    display: flex;
+    flex-direction: column; /* Stack the main image and thumbnails vertically */
+}
+
+.car-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px; /* Add spacing between images */
+}
+
+.gallery-thumbnails {
+    display: flex; /* Align thumbnails horizontally */
+    justify-content: space-between;
+}
+
+.gallery-thumbnails img {
+    width: 30%; /* Limit thumbnail width */
+    border-radius: 5px;
+}
+
+/* Price Section */
+.price {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+/* Car Details Table */
+.car-details {
+    margin-top: 20px; /* Add spacing above car details */
+}
+
+.car-details h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.car-details table {
+    width: 100%;
+    border-collapse: collapse; /* Collapse table borders */
+}
+
+.car-details td {
+    padding: 10px;
+    border: 1px solid #555; /* Light border for table cells */
+}
+
+/* Alternate row colors */
+.car-details tr:nth-child(even) td {
+    background-color: #BDBDBD; /* Light gray for even rows */
+}
+
+.car-details tr:nth-child(odd) td {
+    background-color: #D9D9D9; /* White for odd rows */
+}
+
+.def {
+    font-weight: bold; /* Bold style for definitions */
+}
+
+tr{
+    color: #000;
+}
+
+/* Registration Form */
+.registration-form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.registration-form h2 {
+    margin-bottom: 20px;
+}
+
+.registration-form fieldset {
+    border: 1px solid #ccc; /* Add border to fieldsets */
+    padding: 15px;
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 15px; /* Spacing between fieldsets */
+}
+
+.registration-form label {
+    display: block; /* Ensure labels take up full width */
+    margin-bottom: 10px; /* Space between labels */
+}
+
+.registration-form input, .registration-form textarea {
+    width: calc(100% - 20px); /* Fill the available width, considering padding */
+    padding: 10px;
+    border-radius: 5px; /* Rounded input edges */
+    border: 1px solid #ccc; /* Light border */
+}
+/* Reset Button */
+.reset-button {
+    background-color: #f44336; /* Red color for the reset button */
+    color: white;
+    border: none;
+    padding: 15px 32px; /* Same padding as the submit button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Space above button */
+    margin-left: 10px; /* Space between submit and reset buttons */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button edges */
+}
+
+.reset-button:hover {
+    background-color: #d32f2f; /* Darken on hover */
+}
+    
+
+/* Submit Button */
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px; /* Space above button */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded button edges */
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darken on hover */
+}
+
+/* Footer Section */
+footer {
+    background-color: #222;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+footer p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    /* Center the header content vertically and stack */
+    header {
+        background-color: black; /* Black header background */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 20px 0; /* Add padding for spacing */
+    }
+
+    /* Center the logo and make it larger */
+    .logo {
+        display: flex; /* Use flex to center logo */
+        justify-content: center; /* Center the logo horizontally */
+        width: 100%; /* Full width */
+        margin-bottom: 10px; /* Add spacing between logo and nav */
+    }
+
+    .logo img {
+        width: 80px; /* Adjust logo size for tablet */
+        height: auto; /* Keep auto for aspect ratio */
+    }
+
+    /* Ensure the navbar is below the logo and centered */
+    .navbar {
+        width: 100%; /* Full width */
+    }
+
+    .navbar ul {
+        display: flex;
+        justify-content: center; /* Center the navbar items */
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap; /* Allow wrapping if needed */
+    }
+
+    .navbar li {
+        margin: 10px 20px; /* Adjust spacing between items */
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white; /* White text for navbar */
+        background-color: #666; /* Background color */
+        padding: 10px 15px; /* Increase padding for better click area */
+        border-radius: 20px; /* Rounded corners */
+        transition: background-color 0.3s ease; /* Transition for hover effect */
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.3); /* Slightly opaque on hover */
+    }
+
+    /* Optional: Adjust search bar width for tablet view */
+    .search-bar {
+        max-width: 80%; /* Reduce search bar width */
+        margin-bottom: 15px; /* Add some space below */
+    }
+
+    /* Main Content Section */
+    main {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content */
+        padding: 20px;
+    }
+
+    /* Car Section */
+    .car-info, .registration-form {
+        width: 90%; /* Reduce width for smaller screens */
+        height: 50%;
+        max-width: 600px; /* Limit maximum width */
+        margin-bottom: 20px; /* Add space between sections */
+        
+        
+    }
+    .car-info{
+        margin-top: 20%;
+    }
+    
+
+    .car-gallery {
+        flex-direction: column; /* Ensure images stack vertically */
+        align-items: center;
+    }
+
+    .gallery-thumbnails img {
+        width: 45%; /* Adjust thumbnail size for better visibility */
+        max-width: 180px;
+    }
+
+    /* Car Details Table */
+    .car-details table {
+        font-size: 14px; /* Smaller font size for better fit */
+    }
+
+    .car-listing {
+        width: 90%; /* Adjust width for better visibility */
+        margin: 0 auto; /* Center the listing */
+        padding: 20px; /* Add padding for space */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+    }
+
+    .car-title {
+        font-size: 1.5rem; /* Adjust font size for tablet */
+        color: #333; /* Ensure good contrast */
+    }
+
+    .car-description {
+        font-size: 1.1rem; /* Adjust description size */
+        line-height: 1.5; /* Increase line height for readability */
+    }
+
+    /* Additional adjustments */
+    .car-image {
+        width: 100%; /* Ensure image scales with container */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Limit height for better layout */
+    }
+
+    /* Registration Form */
+    .registration-form input, .registration-form textarea {
+        font-size: 14px; /* Adjust input and textarea font size */
+    }
+
+    /* Footer */
+    footer {
+        padding: 15px;
+    }
+
+    footer .social-icons img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 599px) {
+    .search-bar {
+        display: none; /* Hide the search bar on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu on mobile */
+        background: transparent; /* Make background transparent */
+        border: none; /* Remove border */
+        color: white; /* Set hamburger menu color to white */
+        font-size: 30px; /* Adjust size if needed */
+        cursor: pointer; /* Change cursor on hover */
+        position: absolute; /* Position it absolutely */
+        right: 20px; /* Adjust the right position */
+        top: 20px; /* Adjust the top position */
+    }
+
+    /* Header Section */
+    header {
+        display: flex; /* Ensure header is a flex container */
+        justify-content: space-between; /* Space between logo and hamburger */
+        align-items: center;
+        padding: 10px 20px;
+        background-color: black; /* Change to desired color */
+        z-index: 1000; /* Ensure it is above other content */
+    }
+
+    /* Stack navbar items vertically and center them */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hide the menu by default */
+        background-color: white; /* Change background to white */
+        position: absolute; /* Position it absolutely */
+        top: 60px; /* Adjust top position */
+        right: 0; /* Align to the right */
+        width: 100%; /* Full width */
+        z-index: 9; /* Ensure it appears above other content */
+        padding: 10px 0; /* Padding for links */
+    }
+
+    /* Show the menu when the class 'active' is added */
+    .navbar.active ul {
+        display: flex; /* Show menu when active */
+    }
+
+    /* Car gallery for mobile devices */
+    .car-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ensure gallery images fit within the phone screen */
+    .car-gallery img {
+        width: 100%; /* Ensure the images take up the full width of the container */
+        height: auto; /* Maintain the aspect ratio */
+        max-width: 100%; /* Ensure the images do not exceed the container's width */
+        border-radius: 10px;
+        margin-bottom: 10px; /* Space between images */
+    }
+
+    /* Thumbnails for the gallery */
+    .gallery-thumbnails {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%; /* Ensure thumbnails are responsive */
+    }
+
+    .gallery-thumbnails img {
+        width: 32%; /* Adjust the thumbnail width to fit better in small screens */
+        height: auto;
+        max-width: 100px; /* Limit thumbnail width for better fit */
+        border-radius: 5px;
+    }
+
+    /* Main content section adjustment for mobile */
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Car info and registration form responsiveness */
+    .car-info,
+    .registration-form {
+        width: 100%; /* Use full width of the screen */
+        max-width: 100%; /* Ensure no overflow on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    /* Make sure the car details table is also mobile-friendly */
+    .car-details table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Adjust car image inside listings for mobile */
+    .car-image {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain the aspect ratio */
+        max-height: 250px; /* Limit the height for better fit */
+    }
+
+    /* Adjust header for mobile view */
+    .logo img {
+        width: 60px; /* Smaller logo for mobile */
+        height: 60px;
+    }
+
+    .navbar {
+        width: 100%; /* Full width navigation bar */
+    }
+
+    .navbar ul li {
+        margin: 10px 0; /* Spacing between items */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5); /* Line between items */
+    }
+
+    .navbar ul li a {
+        padding: 15px; /* Adjust padding for mobile */
+        color: black; /* Change link color for visibility */
+        background-color: transparent; /* No background for menu items */
+        border-radius: 8px; /* Rounded corners */
+        text-align: center; /* Center text */
+        width: 100%; /* Full width for menu items */
+    }
+
+    .navbar ul li a:hover {
+        background-color: rgba(0, 0, 0, 0.1); /* Add a hover effect */
+    }
+}
